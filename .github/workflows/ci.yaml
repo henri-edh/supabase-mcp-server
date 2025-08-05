@@ -14,10 +14,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_PROJECT_REF: ${{ secrets.SUPABASE_PROJECT_REF }}
-      SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
-      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      # Test environment variables - no real secrets needed anymore
+      SUPABASE_PROJECT_REF: "abcdefghij1234567890"
+      SUPABASE_DB_PASSWORD: "test-password-123"
+      SUPABASE_ACCESS_TOKEN: "test-access-token"
+      SUPABASE_SERVICE_ROLE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     steps:
       - uses: actions/checkout@v4
 
